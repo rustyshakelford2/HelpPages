@@ -7,7 +7,7 @@
 	<name>HelpPages</name>
 	<description>HelpPages - Bukkit Plugin</description>
 	<build>
-		<finalName>${project.artifactId}</finalName>
+		<finalName>PlayerLookup-${project.version}-b${BUILD_NUMBER}</finalName>
 		<defaultGoal>clean install</defaultGoal>
 		<sourceDirectory>${basedir}/src/</sourceDirectory>
 		<resources>
@@ -25,33 +25,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.0.2</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<descriptors>
-						<descriptor>src/main/assembly/package.xml</descriptor>
-					</descriptors>
-				</configuration>
-				<executions>
-					<execution>
-						<id>build</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-					<preparationGoals>assembly:assembly</preparationGoals>
-					<goals>assembly:assembly</goals>
-					<tagNameFormat>STABLE-@{project.version}</tagNameFormat>
+					<source>1.5</source>
+					<target>1.5</target>
 				</configuration>
 			</plugin>
 		</plugins>
