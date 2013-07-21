@@ -8,7 +8,7 @@
         <file>
             <source>${project.build.directory}/${project.artifactId}.jar</source>
             <outputDirectory>/</outputDirectory>
-            <destName>HelpPages.jar</destName>
+            <destName>${project.build.directory}/${project.artifactId}.jar</destName>
         </file>
     </files>
 </assembly>

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>HelpPages</groupId>
 	<artifactId>HelpPages</artifactId>
-	<version>1.3.0 - dev</version>
+	<version>1.4.1 - dev</version>
 	<name>HelpPages</name>
 	<description>HelpPages - Bukkit Plugin</description>
 	<build>
