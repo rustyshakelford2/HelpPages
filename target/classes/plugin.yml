@@ -2,7 +2,7 @@ name: Help Pages
 version: 1.1
 description: Make your own Help Pages!
 author: Ultimate 
-main: me.ultimate.HP.HelpPages
+main: main.java.me.ultimate.HP.HelpPages
 
 commands:
   help:
