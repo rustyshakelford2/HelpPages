@@ -7,4 +7,4 @@ main: main.java.me.ultimate.HP.HelpPages
 commands:
   help:
     description: View the help menu!
-    usage: /help <page>
+    usage: /help <page> [submenu [submenu]]

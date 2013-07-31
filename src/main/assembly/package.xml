@@ -8,7 +8,7 @@
         <file>
             <source>${project.build.directory}/${project.artifactId}.jar</source>
             <outputDirectory>/</outputDirectory>
-            <destName>LiteQuests.jar</destName>
+            <destName>HelpPages.jar</destName>
         </file>
     </files>
 </assembly>
