@@ -1,15 +1,13 @@
 package main.java.me.ultimate.HP;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.List;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -145,11 +143,21 @@ public class HelpPages extends JavaPlugin implements Listener {
       for (String string : new File(getDataFolder() + File.separator + "Pages").list()) {
          if (string.toLowerCase().replaceFirst(".txt", "")
                .equalsIgnoreCase(filename.toLowerCase().replaceFirst(".txt", ""))) {
+            File file = new File(getDataFolder() + File.separator + "Pages" + File.separator + string);
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF8"));
+            String s;
+            while ((s = in.readLine()) != null) {
+               p.sendMessage(color(s));
+            }
+            in.close();
+            /*
             Path path = FileSystems.getDefault().getPath(getDataFolder() + File.separator + "Pages/" + string,
                   new String[0]);
             List<String> lines = Files.readAllLines(path, Charset.defaultCharset());
-            for (String line : lines)
+            for (String line : lines){
                p.sendMessage(color(line));
+            }*/
             isTrue = true;
          }
       }
