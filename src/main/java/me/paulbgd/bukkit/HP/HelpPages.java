@@ -1,4 +1,4 @@
-package main.java.me.ultimate.HP;
+package me.paulbgd.bukkit.HP;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+
+import net.gravitydevelopment.updater.Updater;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -20,6 +22,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class HelpPages extends JavaPlugin implements Listener {
    public void onEnable() {
+      
+      if (getConfig().getBoolean("Auto-Update", true))
+         new Updater(this, 58942, getFile(), Updater.UpdateType.DEFAULT, false);
+      
       getServer().getPluginManager().registerEvents(this, this);
       try {
          MetricsLite metrics = new MetricsLite(this);
@@ -32,8 +38,10 @@ public class HelpPages extends JavaPlugin implements Listener {
             || (!getConfig().isSet("BypassOtherPlugins"))) {
          getConfig().set("GetMainTxTAutomatically", Boolean.valueOf(true));
          getConfig().set("BypassOtherPlugins", Boolean.valueOf(true));
-         saveConfig();
       }
+      if (!getConfig().isSet("Auto-Update"))
+         getConfig().set("Auto-Update", true);
+      saveConfig();
       File file = new File(getDataFolder() + File.separator + "Pages");
       if (!file.exists())
          file.mkdir();

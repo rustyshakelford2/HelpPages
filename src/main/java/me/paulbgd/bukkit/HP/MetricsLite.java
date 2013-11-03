@@ -1,4 +1,4 @@
-package main.java.me.ultimate.HP;
+package me.paulbgd.bukkit.HP;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;

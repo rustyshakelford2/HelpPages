@@ -1,8 +1,8 @@
 name: Help Pages
-version: 1.1
+version: ${project.version}
 description: Make your own Help Pages!
 author: Ultimate 
-main: main.java.me.ultimate.HP.HelpPages
+main: me.paulbgd.bukkit.HP.HelpPages
 
 commands:
   help:

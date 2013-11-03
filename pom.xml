@@ -5,7 +5,7 @@
 	<artifactId>HelpPages</artifactId>
 	<name>HelpPages</name>
 	<description>HelpPages - Bukkit Plugin</description>
-	<version>1.5.1</version>
+	<version>1.6.0</version>
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<defaultGoal>clean install</defaultGoal>
@@ -29,31 +29,6 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<descriptors>
-						<descriptor>src/main/assembly/package.xml</descriptor>
-					</descriptors>
-				</configuration>
-				<executions>
-					<execution>
-						<id>build</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-					<preparationGoals>assembly:assembly</preparationGoals>
-					<goals>assembly:assembly</goals>
-					<tagNameFormat>STABLE-@{project.version}</tagNameFormat>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 	<repositories>
@@ -66,7 +41,7 @@
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
-			<version>1.6.2-R0.1-SNAPSHOT</version>
+			<version>1.6.4-R2.0</version>
 		</dependency>
 	</dependencies>
 </project>
