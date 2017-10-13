@@ -6,4 +6,5 @@ I have removed the deprecated metrics functions and fixed it so maven can build 
 This isn't my original project and i'm unsure of the license. 
 
 https://www.spigotmc.org/resources/help-pages.21111/
+
 https://dev.bukkit.org/projects/help-pages
