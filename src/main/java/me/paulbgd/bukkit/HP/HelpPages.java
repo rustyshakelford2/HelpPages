@@ -22,11 +22,11 @@ public class HelpPages extends JavaPlugin implements Listener {
 
       if ((!new File(getDataFolder() + File.separator + ".config.yml").exists())
             || (!getConfig().isSet("BypassOtherPlugins"))) {
-         getConfig().set("GetMainTxTAutomatically", Boolean.valueOf(true));
+         getConfig().set("GetMainTxTAutomatically", Boolean.valueOf(false));
          getConfig().set("BypassOtherPlugins", Boolean.valueOf(true));
       }
       if (!getConfig().isSet("Auto-Update"))
-         getConfig().set("Auto-Update", true);
+         getConfig().set("Auto-Update", false);
       saveConfig();
       File file = new File(getDataFolder() + File.separator + "Pages");
       if (!file.exists())
