@@ -8,9 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
-
-import net.gravitydevelopment.updater.Updater;
-
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -22,9 +19,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class HelpPages extends JavaPlugin implements Listener {
    public void onEnable() {
-      
-      if (getConfig().getBoolean("Auto-Update", true))
-         new Updater(this, 58942, getFile(), Updater.UpdateType.DEFAULT, false);
 
       if ((!new File(getDataFolder() + File.separator + ".config.yml").exists())
             || (!getConfig().isSet("BypassOtherPlugins"))) {
