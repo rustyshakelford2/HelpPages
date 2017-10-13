@@ -25,14 +25,6 @@ public class HelpPages extends JavaPlugin implements Listener {
       
       if (getConfig().getBoolean("Auto-Update", true))
          new Updater(this, 58942, getFile(), Updater.UpdateType.DEFAULT, false);
-      
-      getServer().getPluginManager().registerEvents(this, this);
-      try {
-         MetricsLite metrics = new MetricsLite(this);
-         metrics.start();
-      } catch (IOException e) {
-         getLogger().severe("Could not send Metrics data! Are you connected to the internet?");
-      }
 
       if ((!new File(getDataFolder() + File.separator + ".config.yml").exists())
             || (!getConfig().isSet("BypassOtherPlugins"))) {
