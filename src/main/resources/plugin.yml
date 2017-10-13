@@ -1,7 +1,7 @@
 name: HelpPages
 version: ${project.version}
 description: Make your own Help Pages!
-author: Ultimate 
+author: PaulBGD and Community
 main: me.paulbgd.bukkit.HP.HelpPages
 
 commands:
